@@ -207,6 +207,10 @@ section {
     margin-right: 5%;
 }
 
+.translate-word:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 .px-0 {
     padding-left: 0%;
@@ -348,6 +352,9 @@ section {
 
 .bg-dark-gray {
     background-color: rgb(34, 33, 33);
+}
+.bg-dark-gray-transparent {
+    background-color: rgba(34, 33, 33, 0.836);
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */

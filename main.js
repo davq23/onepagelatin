@@ -15,6 +15,41 @@ document.addEventListener('readystatechange', function (event) {
             });
         }*/
 
+        function translateWordClick(event) {
+            var translateWordDropdown = document.getElementById('translate-word');
+
+            translateWordDropdown.querySelector('[name="palabra"]').innerText = this.innerText;
+            var descripcion = '';
+
+            switch(this.getAttribute('tipo')) {
+                case 'sustantivo':
+                    descripcion = 'Sustantivo, '+ this.getAttribute('caso') + ' ' + this.getAttribute('numero')
+                        + ' de la palabra "' + this.getAttribute('base') + '"';
+                    break;
+
+                case 'verbo':
+                    descripcion = 'Verbo, '+ this.getAttribute('persona') + ' persona ' + this.getAttribute('numero')
+                        + ' tiempo ' + this.getAttribute('tiempo') +
+                        ' del verbo "' + this.getAttribute('base') + '"';
+                    break;
+                
+                case 'conjuncion':
+                    descripcion = 'Conjunción';
+                    break;
+            }
+
+            translateWordDropdown.querySelector('[name="descripcion"').innerText = descripcion;
+            translateWordDropdown.querySelector('[name="traduccion"]').innerText = this.getAttribute('traduccion')
+        }
+
+        document.getElementById('ejemplos_traduccion').querySelectorAll('.translate-word')
+            .forEach(function(word) {
+                var wordDropdown = new David.Components.Dropdown(word, 
+                    document.getElementById('translate-word'));
+
+                word.addEventListener('click', translateWordClick);
+            });
+
         document.getElementById('logo').classList.remove('top-yet');
 
         function activeContent(event) {
@@ -50,10 +85,10 @@ function myFunction() {
   }
 }
 
+
 document.addEventListener('click', function (event) {
     David.Components.dropdownList.forEach(function (dropdown) {
-        if (event.target !== dropdown.getTrigger() && 
-            !David.Utils.isChild(dropdown.getElement(), event.target)) {
+        if (!David.Components.dropdownTriggerList[dropdown.getElement().id].includes(event.target)) {
             dropdown.hide();
         }
     });
@@ -102,7 +137,7 @@ var David = {
 
             var element = childElement.parentElement;
 
-            while (element !== parentElement.parentElement || element !== document.body) {
+            while (element && (element !== parentElement.parentElement || element !== document.body)) {
                 element = element.parentElement;
 
                 if (element === parentElement) {
@@ -143,6 +178,8 @@ var David = {
          */
         dropdownList: [],
 
+        dropdownTriggerList: {},
+
         /**
          * 
          * @param {HTMLElement} element 
@@ -167,6 +204,12 @@ var David = {
             });
 
             David.Components.dropdownList.push(this);
+
+            if (!(element.id in David.Components.dropdownTriggerList)) {
+                David.Components.dropdownTriggerList[element.id] = [];
+            }
+
+            David.Components.dropdownTriggerList[element.id].push(trigger);
         }
     }
 }
