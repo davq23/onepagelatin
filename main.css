@@ -1,0 +1,444 @@
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: brown;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+#nav-main > li > a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.788);
+}
+#nav-main > li > a:active {
+    text-decoration: underline;
+    color: white;
+}
+#nav-main > li > a:hover {
+    color: white;
+}
+
+.bg-blue-transparent {
+    background-color: rgba(0, 0, 255, 0.568);
+}
+
+#logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+}
+
+#dropdown-login.active, #dropdown-signup.active {
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+#dropdown-login, #dropdown-signup {
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+a.text-white:active {
+    color: rgba(255, 255, 255, 0.788);
+}
+
+.text-gray {
+    color: rgba(255, 255, 255, 0.788) !important;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.border-none {
+    border-style: none;
+}
+
+.border-solid {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.input-control {
+    padding: 0.5rem 0.6rem;
+    border-radius: 10px;
+    border-style: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+.input-control:focus {
+    outline: none;
+    border-color: rgba(0, 255, 255, 0.644);
+}
+
+nav > ul {
+    list-style: none;
+    justify-content: space-around;
+
+}
+nav > ul > li {
+    height: 100% !important;
+    cursor: pointer;
+}
+
+nav.bg-green-normal > ul > li:hover {
+    background-color: greenyellow;
+    transition: all 0.5s;
+}
+
+p {
+    text-align: justify;
+}
+
+textarea {
+    resize: none;
+}
+
+.absolute {
+    position: absolute;
+}
+
+section {
+    background-color: rgb(8, 8, 145);
+    margin: 0% 5%;
+}
+.bg-green-normal {
+    background-color: rgb(31, 138, 31);
+}
+
+.bg-pale-blue {
+    background-color: rgb(48, 109, 128);
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.border {
+    border: solid 1px black;
+}
+
+.table-border, td, th {
+    border: solid 1px black;
+    padding: 0.5rem 1rem;
+    border-collapse: collapse;
+}
+
+.border-gray {
+    border-color: gray;
+}
+
+.border-round {
+    border-radius: 10px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.font-08rem {
+    font-size: 0.95rem;
+}
+
+.h-25 {
+    height: 25% !important;
+}
+
+
+.h-100 {
+    height: 100% !important;
+}
+
+.hidden {
+    display: none;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.left-10 {
+    left: 10%;
+}
+
+.left-25 {
+    left: 25%;
+}
+
+.mb-05rem {
+    margin-bottom: 0.5rem;
+}
+
+
+.my-10 {
+    margin: 10% 0%;
+}
+
+.mx-5 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+.px-0 {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+.p-10 {
+    padding: 10% !important;
+}
+.p-1 {
+    padding: 1% !important;
+}
+
+.max-width-100 {
+    max-width: 100%;
+}
+
+.mt-05 {
+    margin-top: 0.5%;
+}
+.mt-1 {
+    margin-top: 1%;
+}
+
+.mt-1rem {
+    margin-top: 1rem;
+}
+
+.outline-none:focus {
+    outline: none;
+}
+
+.p-005 {
+    margin-top: 0.05% !important;
+    margin-bottom: 0.05% !important;
+}
+
+
+.py-05 {
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+.py-10 {
+    padding: 10% 0%;
+}
+
+.py-2 {
+    padding: 2% 0%
+}
+
+.py-5 {
+    padding: 5%;
+}
+
+.py-1 {
+    padding: 1% 0%;
+}
+
+.px-1 {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.relative {
+    position: relative;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.h-25 {
+    height: 25%;
+}
+
+.w-10 {
+    width: 10;
+}
+
+.w-15 {
+    width: 15;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.w-10rem {
+    width: 10rem;
+}
+
+
+
+
+.top-25.top-yet {
+    top: 45%;
+    opacity: 0;
+}
+
+.top-25 {
+    left: 35%;
+    top: 35%;
+    opacity: 1;
+    transition: all 1s;
+}
+
+.top-50 {
+    top: 50%;
+}
+
+.bg-dark-gray {
+    background-color: rgb(34, 33, 33);
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 2rem;
+}
+
+@media(min-width: 900px) {
+    #logo {
+        font-size: 100px;
+    }
+
+    #nav-main > li > a {
+        display: inline-block;     
+        position: relative;    
+        z-index: 1;    
+        padding: 1em; 
+        margin: -1em;
+    }
+
+    .dropdown-nav {
+        display: none;
+    }    
+}
+
+@media(max-width: 900px) {
+    #nav-main {
+        flex-direction: column !important;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+
+    .dropdown-nav {
+        color: white;
+        cursor: pointer;
+    }
+    .dropdown-nav:active {
+        text-decoration: dashed;
+        background-color: gray;
+    }
+    
+    .dropdown-content {
+        display: none;
+        max-height: 0;
+        transition: 5.3s;
+    }
+
+    .dropdown-content.active {
+        display: flex;
+        position: relative;
+        max-height: 100%;
+        transition: 1.3s;
+    }
+
+    #nav-main > li > a {
+        display: block;
+    }
+
+    #nav-main > li {
+        width: 100%;
+    }
+    #nav-main > li:hover {
+        background-color: inherit;
+    }
+    #nav-main > li:active {
+        background-color: gray;
+    }
+}
+
+@media(max-width: 700px) {
+    .top-25 {
+        left: 30%;
+        top: 25%;
+        opacity: 1;
+        transition: all 1s;
+    }
+
+    section {
+        margin: 1rem 0;
+    }    
+}
+@media(max-width: 500px) {
+    .top-25 {
+        left: 25%;
+        top: 25%;
+        opacity: 1;
+        transition: all 1s;
+    }
+
+    section {
+        margin: 1rem 0;
+    }    
+}
