@@ -332,7 +332,13 @@ section {
 }
 
 
+.w-300px {
+    width: 300px;
+}
 
+.h-400px {
+    height: 400px;
+}
 
 .top-25.top-yet {
     top: 45%;
